@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Régis KESSÉ | Ingénieur Informatique · IA, LLM & RAG · Vision par Ordinateur</title>
+<meta name="description" content="Portfolio de Régis KESSÉ, ingénieur informatique (ESIR + ESI INP-HB) spécialisé en IA appliquée (LLM, RAG), vision par ordinateur et développement full-stack." />
+<meta name="theme-color" content="#0a0e1a" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Régis KESSÉ | Ingénieur Informatique · IA, LLM & RAG · Vision par Ordinateur" />
+<meta property="og:description" content="Portfolio de Régis KESSÉ : IA appliquée (LLM, RAG), vision par ordinateur, développement full-stack." />
+<meta id="og-image" property="og:image" content="assets/images/profil_at_sigas.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Favicon : monogramme RK en SVG inline (aucun fichier externe requis) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%2306b6d4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-weight='800' font-size='26' fill='white' text-anchor='middle'%3ERK%3C/text%3E%3C/svg%3E" />
+
+<!-- Preconnects -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+
+<!-- AOS (Animate On Scroll) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div id="preloader" aria-hidden="true">
+  <div class="preloader-mark">
+    <span>R</span><span>K</span>
+  </div>
+  <div class="preloader-bar"><span></span></div>
+</div>
+
+<!-- ============ CUSTOM CURSOR GLOW (decorative, pointer devices only) ============ -->
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <a href="#home" class="brand" data-nav-link>
+      <span class="brand-mark">RK</span>
+      <span class="brand-name">Régis&nbsp;KESSÉ</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Navigation principale">
+      <!-- injecté par JS (nav.links) -->
+    </nav>
+
+    <div class="navbar-actions">
+      <button class="icon-btn" id="langToggle" type="button" aria-label="Changer de langue">
+        <span id="langToggleLabel">EN</span>
+      </button>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Changer de thème">
+        <i class="fa-solid fa-sun" id="themeIconSun"></i>
+        <i class="fa-solid fa-moon" id="themeIconMoon"></i>
+      </button>
+      <a href="assets/cv/CV_Regis_KESSE.pdf" class="btn btn-outline btn-sm" id="navCvBtn" download>
+        <i class="fa-solid fa-file-arrow-down"></i> <span data-i18n="nav.cv">CV</span>
+      </a>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu-links" id="mobileMenuLinks" aria-label="Navigation mobile"></nav>
+  <a href="assets/cv/CV_Regis_KESSE.pdf" class="btn btn-primary" download>
+    <i class="fa-solid fa-file-arrow-down"></i> <span data-i18n="nav.cv">CV</span>
+  </a>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+  <div id="particles-bg" class="hero-particles" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow--1" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow--2" aria-hidden="true"></div>
+
+  <div class="container hero-container">
+    <button class="hero-avatar" id="heroAvatarBtn" data-aos="zoom-in" aria-label="Agrandir la photo">
+      <div class="hero-avatar-glow" aria-hidden="true"></div>
+      <img id="heroPhoto" src="" alt="Régis KESSÉ" />
+      <span class="photo-zoom-hint" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+    </button>
+
+    <p class="hero-hello" data-i18n="hero.hello" data-aos="fade-up">Bonjour, je suis</p>
+
+    <h1 class="hero-name" data-aos="fade-up" data-aos-delay="80">
+      <span class="gradient-text" id="heroName">Régis KESSÉ</span>
+    </h1>
+
+    <div class="hero-role" data-aos="fade-up" data-aos-delay="140">
+      <span class="hero-role-prefix">&gt;</span>
+      <span id="typedRole" class="hero-role-typed"></span>
+      <span class="cursor-blink">|</span>
+    </div>
+
+    <p class="hero-tagline" id="heroTagline" data-aos="fade-up" data-aos-delay="200"></p>
+
+    <div class="hero-badges" id="heroBadges" data-aos="fade-up" data-aos-delay="260"></div>
+
+    <div class="hero-cta" data-aos="fade-up" data-aos-delay="320">
+      <a href="#projects" class="btn btn-primary btn-lg" data-nav-link>
+        <span data-i18n="hero.ctaPrimary">Voir mes projets</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <a href="assets/cv/CV_Regis_KESSE.pdf" class="btn btn-ghost btn-lg" download>
+        <i class="fa-solid fa-download"></i>
+        <span data-i18n="hero.ctaSecondary">Télécharger mon CV</span>
+      </a>
+    </div>
+
+    <div class="hero-stats" id="heroStats" data-aos="fade-up" data-aos-delay="380"></div>
+  </div>
+
+  <a href="#about" class="scroll-hint" data-nav-link aria-label="Défiler vers la section suivante">
+    <span data-i18n="hero.scrollHint">Défiler</span>
+    <i class="fa-solid fa-chevron-down"></i>
+  </a>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <p class="kicker" data-i18n="about.kicker">À propos</p>
+      <h2 data-i18n="about.title">Construire des choses qui marchent, pas des démos</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-media" data-aos="fade-right">
+        <button class="about-media-frame" id="aboutPhotoBtn" aria-label="Agrandir la photo">
+          <div class="about-media-blob" aria-hidden="true"></div>
+          <img id="aboutPhoto" src="" alt="Photo de Régis KESSÉ" loading="lazy" />
+          <div class="about-media-ring" aria-hidden="true"></div>
+          <span class="photo-zoom-hint" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+        </button>
+      </div>
+
+      <div class="about-text" data-aos="fade-left">
+        <div id="aboutParagraphs" class="about-paragraphs"></div>
+        <blockquote class="about-quote" id="aboutQuote"></blockquote>
+      </div>
+    </div>
+
+    <div class="facts-grid" id="factsGrid" data-aos="fade-up"></div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="section section-alt">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <p class="kicker" data-i18n="skills.kicker">Compétences</p>
+      <h2 data-i18n="skills.title">Une boîte à outils large, du modèle à la prod</h2>
+      <p class="section-subtitle" id="skillsSubtitle"></p>
+    </div>
+
+    <div class="skills-grid" id="skillsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <p class="kicker" data-i18n="experience.kicker">Parcours</p>
+      <h2 data-i18n="experience.title">Expérience professionnelle</h2>
+      <p class="section-subtitle" id="experienceSubtitle"></p>
+    </div>
+
+    <div class="timeline" id="timeline"></div>
+  </div>
+</section>
+
+<!-- ============ EPSIE SPOTLIGHT ============ -->
+<section id="epsie" class="section epsie-section">
+  <div class="epsie-bg" aria-hidden="true"></div>
+  <div class="container epsie-container" data-aos="zoom-in">
+    <p class="kicker kicker--light" id="epsieKicker">Side-project</p>
+    <h2 id="epsieTitle">EPSIE</h2>
+    <p class="epsie-desc" id="epsieDesc"></p>
+    <div class="epsie-members" id="epsieMembers"></div>
+    <a href="https://epsie-startup.com" target="_blank" rel="noopener" class="btn btn-outline-light" id="epsieLink">
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      <span id="epsieLinkLabel">epsie-startup.com</span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <p class="kicker" data-i18n="projects.kicker">Projets</p>
+      <h2 data-i18n="projects.title">Projets &amp; réalisations</h2>
+      <p class="section-subtitle" id="projectsSubtitle"></p>
+    </div>
+
+    <div class="filters" id="filters" data-aos="fade-up"></div>
+
+    <div class="projects-grid" id="projectsGrid"></div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section id="education" class="section section-alt">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <p class="kicker" data-i18n="education.kicker">Formation</p>
+      <h2 data-i18n="education.title">Parcours académique</h2>
+    </div>
+
+    <div class="education-grid" id="educationGrid"></div>
+
+    <div class="certifications" id="certificationsBlock">
+      <h3 id="certificationsTitle"></h3>
+      <div class="certifications-list" id="certificationsList"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="section-head" data-aos="fade-up">
+      <p class="kicker" data-i18n="contact.kicker">Contact</p>
+      <h2 data-i18n="contact.title">Discutons de votre projet</h2>
+      <p class="section-subtitle" id="contactSubtitle"></p>
+    </div>
+
+    <div class="contact-grid" data-aos="fade-up">
+      <div class="contact-cards" id="contactCards"></div>
+
+      <div class="contact-cta-card">
+        <p class="contact-availability-title" id="availabilityTitle"></p>
+        <p class="contact-availability" id="availabilityText"></p>
+        <a href="mailto:kessegabriel@gmail.com" class="btn btn-primary btn-lg" id="contactCtaBtn">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span id="contactCtaLabel"></span>
+        </a>
+        <div class="contact-socials" id="contactSocials"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="#home" class="brand" data-nav-link>
+      <span class="brand-mark">RK</span>
+    </a>
+    <p id="footerText"></p>
+    <button class="btn-back-top" id="backToTop" aria-label="Retour en haut">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+</footer>
+
+<!-- ============ PHOTO LIGHTBOX ============ -->
+<div class="modal-overlay lightbox-overlay" id="photoLightbox" role="dialog" aria-modal="true" aria-hidden="true">
+  <button class="modal-close" id="lightboxClose" aria-label="Fermer">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+</div>
+
+<!-- ============ PROJECT MODAL ============ -->
+<div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Fermer">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="modal-media" id="modalMedia"></div>
+    <div class="modal-body">
+      <div class="modal-tags" id="modalTags"></div>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+      <a href="#" id="modalLink" class="btn btn-outline" target="_blank" rel="noopener" style="display:none;">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        <span id="modalLinkLabel">Voir en ligne</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.min.js"></script>
+
+<script src="data/images.js"></script>
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
