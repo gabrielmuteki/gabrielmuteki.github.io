@@ -157,7 +157,7 @@ Accédez ensuite à [http://localhost:8080](http://localhost:8080) dans votre na
 
 - **Couleurs de marque** : Modifiez les variables CSS `--accent-1`, `--accent-2` et `--accent-3` en haut de [`css/style.css`](file:///c:/inetpub/wwwroot/portfolio/css/style.css).
 - **Thème par défaut** : Dans [`index.html`](file:///c:/inetpub/wwwroot/portfolio/index.html), modifiez la balise `<html lang="fr" data-theme="dark">` en `data-theme="light"` si vous préférez le mode clair par défaut.
-- **Mise à jour du CV** : Remplacez le fichier [`assets/cv/CV_Regis_KESSE.pdf`](file:///c:/inetpub/wwwroot/portfolio/assets/cv/CV_Regis_KESSE.pdf) par votre nouveau CV (gardez le même nom de fichier).
+- **Mise à jour du CV** : Remplacez le fichier [`assets/cv/CV_Regis_KESSE.pdf`](file:///c:/inetpub/wwwroot/portfolio/assets/cv/CV_Regis_KESSE.pdf) par votre nouveau CV (ajuster le nom du fichier dans index.html).
 
 ---
 
