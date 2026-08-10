@@ -666,7 +666,9 @@
   function initGsap() {
     if (!window.gsap || !window.ScrollTrigger) return;
     gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.config({ autoRefreshEvents: "visibilitychange,DOMContentLoaded,load" });
     ScrollTrigger.getAll().forEach((st) => st.kill());
+
 
     // Parallax léger sur les halos du hero
     gsap.to(".hero-glow--1", {
