@@ -195,7 +195,7 @@ const CONTENT = {
           points: [
             "Administration Windows Server (AD DS), SQL Server, ERP (SAGE i7, Odoo)",
             "Sécurité opérationnelle : pare-feu SOPHOS, antivirus Kaspersky Endpoint, sauvegardes Acronis",
-            "Gestion messagerie (IONOS, M365), supervision LAN et téléphonie",
+            "Gestion messagerie (IONOS, M365, Google Workspace), supervision LAN et téléphonie",
           ],
         },
         {
