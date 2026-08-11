@@ -12,7 +12,13 @@
     theme: localStorage.getItem("rk-theme") || "dark",
     images: {},
     activeFilter: "all",
+    lastUpdated: null,
+    lastUpdatedFetched: false,
+    visitCount: null,
+    visitCountFetched: false,
   };
+
+  const GITHUB_REPO = "gabrielmuteki/gabrielmuteki.github.io";
 
   const CATEGORY_ICON = {
     ia: "fa-brain",
@@ -484,6 +490,66 @@
   /* ---------------- FOOTER ---------------- */
   function renderFooter() {
     $("#footerText").textContent = "© " + new Date().getFullYear() + " Régis KESSÉ. " + t().footer.text;
+    renderFooterMeta();
+    fetchLastUpdated();
+    fetchVisitCount();
+  }
+
+  function renderFooterMeta() {
+    const updatedNode = $("#footerUpdated");
+    if (updatedNode) {
+      updatedNode.textContent = state.lastUpdated
+        ? t().footer.lastUpdated +
+          " : " +
+          state.lastUpdated.toLocaleDateString(state.lang === "fr" ? "fr-FR" : "en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })
+        : "";
+    }
+    const counterNode = $("#visitorCounter");
+    if (counterNode) {
+      counterNode.innerHTML = "";
+      if (state.visitCount != null) {
+        counterNode.appendChild(el("i", { class: "fa-solid fa-eye" }));
+        counterNode.appendChild(document.createTextNode(" " + state.visitCount + " " + t().footer.visits));
+      }
+    }
+  }
+
+  /** Date du dernier commit sur le dépôt (branche par défaut), via l'API publique GitHub. */
+  function fetchLastUpdated() {
+    if (state.lastUpdatedFetched) return;
+    state.lastUpdatedFetched = true;
+    fetch("https://api.github.com/repos/" + GITHUB_REPO + "/commits?per_page=1")
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((data) => {
+        const iso = data && data[0] && data[0].commit && data[0].commit.committer && data[0].commit.committer.date;
+        if (iso) {
+          state.lastUpdated = new Date(iso);
+          renderFooterMeta();
+        }
+      })
+      .catch(() => {});
+  }
+
+  /** Nombre total de visites, via le compteur JSON public de GoatCounter (aucune IP stockée). */
+  function fetchVisitCount() {
+    if (state.visitCountFetched) return;
+    const script = $("script[data-goatcounter]");
+    const base = script && script.getAttribute("data-goatcounter").replace(/\/count$/, "");
+    if (!base) return;
+    state.visitCountFetched = true;
+    fetch(base + "/counter/TOTAL.json")
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((data) => {
+        if (data && data.count != null) {
+          state.visitCount = data.count;
+          renderFooterMeta();
+        }
+      })
+      .catch(() => {});
   }
 
   /* ---------------- OG IMAGE ---------------- */

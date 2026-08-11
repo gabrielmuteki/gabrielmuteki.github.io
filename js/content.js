@@ -713,6 +713,8 @@ const CONTENT = {
     footer: {
       text: "Tous droits réservés.",
       backToTop: "Haut de page",
+      lastUpdated: "Dernière mise à jour",
+      visits: "visites",
     },
 
     themeToggle: { light: "Thème clair", dark: "Thème sombre" },
@@ -1425,6 +1427,8 @@ const CONTENT = {
     footer: {
       text: "All rights reserved.",
       backToTop: "Back to top",
+      lastUpdated: "Last updated",
+      visits: "visits",
     },
 
     themeToggle: { light: "Light theme", dark: "Dark theme" },

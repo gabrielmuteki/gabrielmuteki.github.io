@@ -525,6 +525,15 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .btn-back-top:hover { background: var(--gradient); color: white; border-color: transparent; transform: translateY(-4px); }
 
+.footer-meta {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--border);
+  color: var(--text-faint); font-size: 0.76rem; font-family: var(--font-mono); flex-wrap: wrap;
+}
+.footer-meta-sep { opacity: 0.5; }
+.visitor-counter { display: inline-flex; align-items: center; gap: 6px; }
+.visitor-counter i { color: var(--accent-2); }
+
 /* ---------- 16. MODAL ---------- */
 .modal-overlay {
   position: fixed; inset: 0; z-index: 800; background: rgba(4,6,12,0.72); backdrop-filter: blur(8px);
