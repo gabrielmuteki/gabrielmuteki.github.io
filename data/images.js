@@ -166,6 +166,14 @@ const IMAGES_MANIFEST = {
     src: "assets/images/projects/goutago.jpg",
     available: true,
   },
+  project_tontigo: {
+    description: "Capture d'écran / cover de TontiGo (application mobile de tontine digitale).",
+    used_in: "Projets, carte « TontiGo »",
+    recommended_size: "1280x800px",
+    type: "local",
+    src: "assets/images/projects/cover_tontigo.jpg",
+    available: true,
+  },
   project_stanvtc: {
     description: "Capture d'écran de STAN VTC (transport collaboratif).",
     used_in: "Projets, carte « STAN VTC »",

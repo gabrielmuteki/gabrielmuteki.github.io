@@ -422,6 +422,18 @@ const CONTENT = {
           link: "https://goutago.com/",
         },
         {
+          id: "tontigo",
+          category: "web",
+          featured: true,
+          title: "TontiGo : Application Mobile de Tontine Digitale",
+          summary: "Digitalisation des tontines africaines pour BIDNAE SARL, en tant que chef de projet, analyse & conception.",
+          description:
+            "Application mobile Flutter destinée aux marchés d'Afrique de l'Ouest francophone, qui modernise et sécurise les tontines (épargne communautaire tournante) : associations, packages de cotisation, cycles de reversement automatisés, scoring de fiabilité, chat temps réel et paiements Mobile Money via l'agrégateur BIDNAE PAY. Je pilote le projet pour EPSIE : gestion d'équipe, analyse des besoins et conception (architecture Firebase, modèle de données, règles métier), tandis que le développement est assuré par l'équipe.",
+          tags: ["Flutter", "Firebase", "Firestore", "Cloud Functions · TypeScript", "Chef de projet", "Conception"],
+          image: "project_tontigo",
+          link: "https://tontigo.goutago.com/",
+        },
+        {
           id: "stanvtc",
           category: "web",
           featured: false,
@@ -1136,6 +1148,18 @@ const CONTENT = {
           tags: ["PHP · MySQL", "Flutter · Firebase", "Project lead", "Production"],
           image: "project_goutago",
           link: "https://goutago.com/",
+        },
+        {
+          id: "tontigo",
+          category: "web",
+          featured: true,
+          title: "TontiGo: Digital Tontine Mobile App",
+          summary: "Digitizing African tontines for BIDNAE SARL, as project manager, analysis & design.",
+          description:
+            "Flutter mobile app for French-speaking West African markets, modernizing and securing tontines (rotating savings associations): associations, contribution packages, automated payout cycles, a trust score, real-time chat, and Mobile Money payments via the BIDNAE PAY aggregator. I lead the project for EPSIE — team management, requirements analysis and design (Firebase architecture, data model, business rules) — while development is handled by the team.",
+          tags: ["Flutter", "Firebase", "Firestore", "Cloud Functions · TypeScript", "Project lead", "Design"],
+          image: "project_tontigo",
+          link: "https://tontigo.goutago.com/",
         },
         {
           id: "stanvtc",
