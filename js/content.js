@@ -38,7 +38,7 @@ const CONTENT = {
       ],
       tagline:
         "Ingénieur Bac+5 (ESIR + ESI INP-HB) qui aime construire des systèmes qui tournent vraiment : du modèle de deep learning à l'API qui le sert, de la donnée brute au tableau de bord, du prototype au déploiement en production.",
-      badges: ["Rennes, France", "Disponible dès octobre 2026", "Alternance 12 mois", "Ouvert au remote"],
+      badges: ["Rennes, France", "Disponible dès février 2027", "Stage de fin d'études (6 mois)", "Ouvert au remote"],
       ctaPrimary: "Voir mes projets",
       ctaSecondary: "Télécharger mon CV",
       scrollHint: "Défiler",
@@ -64,7 +64,7 @@ const CONTENT = {
         { icon: "fa-graduation-cap", label: "Formation", value: "Ingénieur ESIR + ESI INP-HB (Bac+5)" },
         { icon: "fa-location-dot", label: "Localisation", value: "Rennes, France · mobile" },
         { icon: "fa-language", label: "Langues", value: "Français (natif) · Anglais (B2)" },
-        { icon: "fa-briefcase", label: "Disponibilité", value: "Alternance 12 mois dès octobre 2026 · remote possible" },
+        { icon: "fa-briefcase", label: "Disponibilité", value: "Stage de fin d'études (6 mois) dès février 2027 · remote possible" },
         { icon: "fa-rocket", label: "Side-project", value: "Fondateur d'EPSIE (studio dev indépendant)" },
         { icon: "fa-certificate", label: "Certifications", value: "MOS Excel · MTA Windows OS" },
       ],
@@ -89,12 +89,12 @@ const CONTENT = {
         {
           icon: "fa-diagram-project",
           name: "Machine Learning & Deep Learning",
-          items: ["Keras / TensorFlow", "CNN · Transfer Learning", "U-Net (segmentation)", "scikit-learn (SVM, RF, AdaBoost)", "NLP (NLTK, TF-IDF)", "IA symbolique"],
+          items: ["PyTorch", "Keras / TensorFlow", "CUDA / GPU", "CNN · Transfer Learning", "U-Net (segmentation)", "VAE (autoencodeurs variationnels)", "Attaques adversariales (FGSM)", "scikit-learn (SVM, RF, AdaBoost)", "NLP (NLTK, TF-IDF)", "IA symbolique"],
         },
         {
           icon: "fa-eye",
           name: "Vision par ordinateur",
-          items: ["OpenCV", "ViSP", "Segmentation (k-means)", "Géométrie épipolaire", "Photogrammétrie / SfM", "FFT / DCT", "YOLOv8"],
+          items: ["OpenCV", "ViSP", "Segmentation (k-means)", "Géométrie épipolaire", "Asservissement visuel", "Imagerie médicale (IRM)", "Photogrammétrie / SfM", "FFT / DCT", "YOLOv8"],
         },
         {
           icon: "fa-cube",
@@ -319,6 +319,28 @@ const CONTENT = {
             "9 TPs couvrant l'apprentissage supervisé (Decision Trees, SVM, Random Forests, AdaBoost, Bayésien), les réseaux de neurones sous TensorFlow (GradientTape, autodiff), les CNN (Sequential & Functional API), le Transfer Learning (MobileNetV2, fine-tuning) et la segmentation sémantique (U-Net, dataset CARLA).",
           tags: ["TensorFlow / Keras", "CNN", "Transfer Learning", "U-Net", "scikit-learn"],
           image: "project_deep_learning_tps",
+        },
+        {
+          id: "dlv_pytorch",
+          category: "ia",
+          featured: false,
+          title: "DLV : Deep Learning pour la Vision (PyTorch)",
+          summary: "Introduction PyTorch, attaques adversariales (FGSM) et autoencodeurs variationnels (VAE).",
+          description:
+            "Module ESIR3 en 3 sessions : prise en main de PyTorch, génération d'exemples adversariaux par FGSM (Fast Gradient Sign Method) pour tester la robustesse d'un modèle, puis implémentation d'un autoencodeur variationnel (VAE) pour la génération d'images.",
+          tags: ["PyTorch", "FGSM", "VAE", "Deep Learning"],
+          image: "project_dlv_pytorch",
+        },
+        {
+          id: "imed_vrob",
+          category: "vision",
+          featured: false,
+          title: "Imagerie Médicale & Vision Robotique",
+          summary: "Segmentation IRM cérébrale et asservissement visuel sur bras articulé.",
+          description:
+            "IMED : manipulation d'imagerie médicale IRM (segmentation du cerveau par coupe, volume et tissu, surface 3D, correction du biais d'inhomogénéité B). VROB : vision robotique sur bras articulé, positionnement et asservissement visuel par caméra.",
+          tags: ["IRM", "Segmentation médicale", "Asservissement visuel", "Vision robotique"],
+          image: "project_imed_vrob",
         },
         {
           id: "vision_pipeline",
@@ -557,8 +579,8 @@ const CONTENT = {
           title: "INPAF : Réseau des Anciens Élèves de l'INP-HB en France",
           summary: "Application web du réseau alumni INP-HB en France, avec pipeline DevSecOps.",
           description:
-            "Application web destinée au réseau des anciens élèves de l'INP-HB en France : migration Django puis Flask + React (servi par Vite), MySQL, pipeline CI/CD GitHub Actions, configuration et administration d'un serveur Ubuntu.",
-          tags: ["Django", "Flask", "React · Vite", "GitHub Actions", "Ubuntu Server"],
+            "Application web destinée au réseau des anciens élèves de l'INP-HB en France : backend migré de Django vers Flask, frontend React (servi par Vite), MySQL, pipeline CI/CD GitHub Actions, configuration et administration d'un serveur Ubuntu.",
+          tags: ["Flask", "React · Vite", "MySQL", "GitHub Actions", "Ubuntu Server"],
           image: "project_inpaf",
         },
         {
@@ -718,7 +740,7 @@ const CONTENT = {
       ctaButton: "M'écrire un email",
       availabilityTitle: "Disponibilité",
       availability:
-        "Alternance de 12 mois dès octobre 2026, ou stage de 6 mois dès février 2027, en présentiel, hybride ou 100% remote. Après l'obtention du diplôme (2027), ouvert à tout type de contrat (CDI, freelance, mission).",
+        "Stage de fin d'études de 6 mois dès mi-février 2027, en présentiel, hybride ou 100% remote. Après l'obtention du diplôme (2027), ouvert à tout type de contrat (CDI, freelance, mission).",
       socialsTitle: "Retrouvez-moi",
     },
 
@@ -766,7 +788,7 @@ const CONTENT = {
       ],
       tagline:
         "Master's-level engineering student (ESIR + ESI INP-HB) who likes building systems that actually run: from the deep learning model to the API that serves it, from raw data to the dashboard, from prototype to production.",
-      badges: ["Rennes, France", "Available from October 2026", "12-month apprenticeship", "Open to remote"],
+      badges: ["Rennes, France", "Available from February 2027", "6-month final internship", "Open to remote"],
       ctaPrimary: "View my projects",
       ctaSecondary: "Download my resume",
       scrollHint: "Scroll",
@@ -792,7 +814,7 @@ const CONTENT = {
         { icon: "fa-graduation-cap", label: "Education", value: "Engineer, ESIR + ESI INP-HB (MSc-level)" },
         { icon: "fa-location-dot", label: "Location", value: "Rennes, France · mobile" },
         { icon: "fa-language", label: "Languages", value: "French (native) · English (B2)" },
-        { icon: "fa-briefcase", label: "Availability", value: "12-month apprenticeship from Oct. 2026 · remote-friendly" },
+        { icon: "fa-briefcase", label: "Availability", value: "6-month final internship from Feb. 2027 · remote-friendly" },
         { icon: "fa-rocket", label: "Side project", value: "Founder of EPSIE (indie dev studio)" },
         { icon: "fa-certificate", label: "Certifications", value: "MOS Excel · MTA Windows OS" },
       ],
@@ -817,12 +839,12 @@ const CONTENT = {
         {
           icon: "fa-diagram-project",
           name: "Machine Learning & Deep Learning",
-          items: ["Keras / TensorFlow", "CNN · Transfer Learning", "U-Net (segmentation)", "scikit-learn (SVM, RF, AdaBoost)", "NLP (NLTK, TF-IDF)", "Symbolic AI"],
+          items: ["PyTorch", "Keras / TensorFlow", "CUDA / GPU", "CNN · Transfer Learning", "U-Net (segmentation)", "VAE (variational autoencoders)", "Adversarial attacks (FGSM)", "scikit-learn (SVM, RF, AdaBoost)", "NLP (NLTK, TF-IDF)", "Symbolic AI"],
         },
         {
           icon: "fa-eye",
           name: "Computer Vision",
-          items: ["OpenCV", "ViSP", "Segmentation (k-means)", "Epipolar geometry", "Photogrammetry / SfM", "FFT / DCT", "YOLOv8"],
+          items: ["OpenCV", "ViSP", "Segmentation (k-means)", "Epipolar geometry", "Visual servoing", "Medical imaging (MRI)", "Photogrammetry / SfM", "FFT / DCT", "YOLOv8"],
         },
         {
           icon: "fa-cube",
@@ -1047,6 +1069,28 @@ const CONTENT = {
             "9 labs covering supervised learning (Decision Trees, SVM, Random Forests, AdaBoost, Bayesian), neural networks in TensorFlow (GradientTape, autodiff), CNNs (Sequential & Functional API), Transfer Learning (MobileNetV2, fine-tuning) and semantic segmentation (U-Net, CARLA dataset).",
           tags: ["TensorFlow / Keras", "CNN", "Transfer Learning", "U-Net", "scikit-learn"],
           image: "project_deep_learning_tps",
+        },
+        {
+          id: "dlv_pytorch",
+          category: "ia",
+          featured: false,
+          title: "DLV: Deep Learning for Vision (PyTorch)",
+          summary: "PyTorch introduction, adversarial attacks (FGSM) and variational autoencoders (VAE).",
+          description:
+            "3-session ESIR3 module: getting started with PyTorch, generating adversarial examples with FGSM (Fast Gradient Sign Method) to test model robustness, then implementing a variational autoencoder (VAE) for image generation.",
+          tags: ["PyTorch", "FGSM", "VAE", "Deep Learning"],
+          image: "project_dlv_pytorch",
+        },
+        {
+          id: "imed_vrob",
+          category: "vision",
+          featured: false,
+          title: "Medical Imaging & Robotic Vision",
+          summary: "Brain MRI segmentation and visual servoing on a robotic arm.",
+          description:
+            "IMED: medical MRI imaging (brain segmentation by slice, volume and tissue, 3D surface, B-field inhomogeneity bias correction). VROB: robotic vision on an articulated arm, camera positioning and visual servoing.",
+          tags: ["MRI", "Medical segmentation", "Visual servoing", "Robotic vision"],
+          image: "project_imed_vrob",
         },
         {
           id: "vision_pipeline",
@@ -1284,8 +1328,8 @@ const CONTENT = {
           title: "INPAF: INP-HB Alumni Network in France",
           summary: "Alumni network web app for INP-HB graduates in France, with a DevSecOps pipeline.",
           description:
-            "Web application for the network of INP-HB alumni in France: migrated from Django to Flask + React (served by Vite), MySQL, GitHub Actions CI/CD pipeline, configuration and administration of an Ubuntu server.",
-          tags: ["Django", "Flask", "React · Vite", "GitHub Actions", "Ubuntu Server"],
+            "Web application for the network of INP-HB alumni in France: backend migrated from Django to Flask, React frontend (served by Vite), MySQL, GitHub Actions CI/CD pipeline, configuration and administration of an Ubuntu server.",
+          tags: ["Flask", "React · Vite", "MySQL", "GitHub Actions", "Ubuntu Server"],
           image: "project_inpaf",
         },
         {
@@ -1444,7 +1488,7 @@ const CONTENT = {
       ctaButton: "Email me",
       availabilityTitle: "Availability",
       availability:
-        "12-month apprenticeship from October 2026, or a 6-month internship from February 2027, on-site, hybrid or fully remote. After graduating (2027), open to any type of contract (permanent, freelance, contract work).",
+        "6-month final-year internship from mid-February 2027, on-site, hybrid or fully remote. After graduating (2027), open to any type of contract (permanent, freelance, contract work).",
       socialsTitle: "Find me online",
     },
 
